@@ -37,7 +37,7 @@ under the image section.
     imagePullPolicy: IfNotPresent
 ```
 
-Also increase the livenessProbe and readinessProbe with larget timeouts
+Also increase the livenessProbe and readinessProbe with large timeouts
 ```
         livenessProbe:
           failureThreshold: 10
@@ -98,7 +98,7 @@ Connect to the interactive shell of the router pod.
 $ oc exec -it router-5-8lknf -n default sh
 ```
 
-Open and see the `router.json` file and obeserve for any error. 
+Open and see the `router.json` file and obeserv for any error. 
 ```
     "ohc:ohc-patient-viewer": {
       "Name": "my-app-store",
@@ -150,7 +150,7 @@ kubectl port-forward pod/my-app-store-asdfsad-sdf-df 8084:8080
 
 5. Suspected that there could be probelm with the image used in the service. Replaced the image used in the Deployment.yaml file with another image and redeployed in OCP. It works. So the issue could be related to image only.
 
-6. Got the access to see the Dockerfile of the image. It is Vue Js application. The Dockerfile shows that Vue Js applicaiton is directly converted as a Docker image. It is the root cause of the probelm.
+6. Got the access to see the Dockerfile of the image. It is Vue Js application. The Dockerfile shows that Vue Js application is directly converted as a Docker image. It is the root cause of the problem.
 
 7. Bundling the Vue Js application with out wrapping with some webserver like NGINX will be working as a service in Kubernetes. It can be accessed via NodePort. 
 

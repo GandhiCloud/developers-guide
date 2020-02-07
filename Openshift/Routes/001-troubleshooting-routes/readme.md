@@ -1,13 +1,16 @@
-# Troubleshooting tips for the issues with Routes
-Explains about the various problems faced with routes in Openshift and how to debut it.
+# Troubleshooting tips for the issues with Route
+Explains about the various problems faced with routes in Openshift and how to debug it.
 
 ## Tags
 
-* Openshift
-* Kubernetes
-* Route
-* Router
-* Port forwarding
+Primary : 
+
+Openshift, Kubernetes, Route, Router, routes.json
+
+Secondary : 
+
+Port forwarding, Vue Js, NGINX, Docker 
+
 
 ## Router Logs
 

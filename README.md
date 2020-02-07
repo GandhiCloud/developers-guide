@@ -1,4 +1,4 @@
-# Developers Guide
+# Smart Guide
 
 Contains code snippets, troubleshooting tips, tech tips and reference links for common problems and issues reated to the below topics.
 

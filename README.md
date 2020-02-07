@@ -1,6 +1,6 @@
 # Developers Guide
 
-Contains tips, troubleshooting, reference links and code snippets for common problems and issues reated to the below topics.
+Contains code snippets, troubleshooting tips, tech tips and reference links for common problems and issues reated to the below topics.
 
 
 ## Openshift

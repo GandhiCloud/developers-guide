@@ -23,7 +23,6 @@ $ oc get sc
 
 2. create a new PVC using the available storage class.
 
-Add the below argument sections 
 ```
 apiVersion: v1
 kind: PersistentVolumeClaim
@@ -48,7 +47,7 @@ spec:
 
 ## Note
 
-1. It is good to have default storage class created for the cluster. It can be patched via the below command.
+1. It is good to have default storage class created for the cluster. Also It can be patched via the below command.
 ```
 kubectl patch storageclass <your-class-name> -p ‘{“metadata”: {“annotations”:{“storageclass.kubernetes.io/is-default-class”:“true”}}}’
 ```

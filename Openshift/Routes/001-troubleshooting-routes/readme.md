@@ -1,4 +1,4 @@
-# Troubleshooting tips for the issues with Route
+# Troubleshooting tips for Route related issues
 Explains about the various problems faced with routes in Openshift and how to debug it.
 
 ## Tags
@@ -14,9 +14,9 @@ Port forwarding, Vue Js, NGINX, Docker
 
 ## Router Logs
 
-Router logs can be seen using the below 
+Router logs can be seen by doing below steps.
 
-#### Enable Debug log 
+#### 1. Enable Debug log 
 
 Increase the log levels to debug in `DeploymentConfiguration` called `router` to see the router logs.
 
@@ -64,7 +64,7 @@ Also increase the livenessProbe and readinessProbe with large timeouts
           timeoutSeconds: 30
 ```
 
-#### Another way to enable Debug log 
+##### Another way to enable Debug log 
 
 There is an another way to increase the debug log like the below.
 
@@ -73,7 +73,7 @@ $ oc set env dc/router ROUTER_SYSLOG_ADDRESS=<dest_ip:dest_port>  ROUTER_LOG_LEV
 ```
 You can refer the same in https://docs.openshift.com/container-platform/3.11/admin_guide/router.html
 
-#### View Logs in router pod 
+#### 2. View Logs in router pod 
 
 Run the below command to know the router pod.
 ```
@@ -100,7 +100,7 @@ $ oc exec -it router-5-8lknf -n default sh
 
 Open and see the `router.json` file and obeserv for any error. 
 ```
-    "ohc:ohc-patient-viewer": {
+    "aaa:my-app-store": {
       "Name": "my-app-store",
       "Namespace": "aaa",
       "Host": "my-app-store-aaa.apps.23.2.1.4.xip.io",
@@ -111,7 +111,7 @@ Open and see the `router.json` file and obeserv for any error.
       "Status": "",
       "PreferPort": "myhttp",
       "InsecureEdgeTerminationPolicy": "",
-      "RoutingKeyName": "bbad49c76bc973a079eef8acbb34a45d",
+      "RoutingKeyName": "bbad49c76b34a45d",
       "IsWildcard": false,
       "Annotations": {
         "openshift.io/host.generated": "true"
@@ -125,16 +125,19 @@ Open and see the `router.json` file and obeserv for any error.
     },
 ```
 
-The above piece of the file shows the router details of an router. The contents `"ServiceUnitNames": null` and `"ActiveEndpoints": 0` indicates that there is some issue with your service to expose through the HA Proxy / Router. 
+The above piece of the file shows the router details of an router. 
 
-You may need to check the service or image of that service pod.
+The contents `"ServiceUnitNames": null` and `"ActiveEndpoints": 0` indicates that there is some issue with your service to expose through the HA Proxy / Router. 
 
+You may need to check the service or pod image of that route to understand about the issue.
 
 ## Invalid Host Header Error
 
 When accessing a service through the route there was an error called "Invalid Host Header". 
 
-1. Checked whether the other services are working with route to make sure the Router and OCP configurations are OK. The other services are working fine.
+Here are the steps done to identify the issue.
+
+1. Checked whether other services are working with route to make sure the Router and OCP configurations are OK. The other services are working fine.
 
 2. Able to access the service by doing the service port forwarding. http://localhost:8082
 ```

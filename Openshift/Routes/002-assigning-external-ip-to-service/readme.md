@@ -1,6 +1,6 @@
 # External IP in Service
 
-External-IP in the Openshift 3.11 can be assigned to the sevice.
+External-IP in the Openshift 3.11 can be assigned to the service.
 
 ## Tags
 
@@ -23,11 +23,13 @@ Here the external IP can be patched using the below command.
 oc patch svc g-app-store-service -p '{"spec":{"externalIPs":["123.333.323.339"]}}'
 ```
 
-Then the application can be referenced using the exteranl ip and port.
+Then the application can be referenced using the external ip and port.
 
 ## Default IP Range for the external IPs
 
-During the installation of the Openshift 3.11 and below (???), the default IP Range for the external IPs can be set. If it was not set rightly, it may assign the some unused internal ips to external ips. In this case though external ip is listed in  `oc get svc`, it will not allow to access the service via ExternalIP
+During the installation of the Openshift 3.11 and below (???), the default IP Range for the external IPs can be set. If it was not set rightly, it may assign some unused internal ips to external ips. 
+
+In this case though the external ip assigned the service cannot be accessed via ExternalIP.
 
 ## Reference
 

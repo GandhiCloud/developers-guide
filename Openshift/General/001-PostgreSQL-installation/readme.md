@@ -10,7 +10,7 @@ When installing PostgreSql through Openshift 3.11 Catalog the storage was in pen
 
 ## Root cause
 
-No default Storage class exists and not able to bind any storage classs.
+No default Storage class exists and not able to bind any storage class.
 
 ## Solution
 
@@ -38,7 +38,7 @@ spec:
   resources:
     requests:
       storage: 20Gi
-  storageClassName: rook-ceph-block-internal
+  storageClassName: nfs-storage-1
 ```
 
 3. Delete the installed Postgresql and create new one from catalog. 

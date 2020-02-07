@@ -1,4 +1,4 @@
-# Sample Deployment files Route
+# Sample Deployment files for Route
 
 Sample Deployment files to deploy application with route in Openshift.
 

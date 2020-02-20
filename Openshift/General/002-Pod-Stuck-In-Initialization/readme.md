@@ -54,6 +54,8 @@ oc describe node 10.33.22.33
 
 1.  Rebooted the node the IBM cloud web console
 
+<img src="images/node-reload.png" width="656" title="Issue">
+
 ## Reference
 
 https://gsicsi.slack.com/archives/CJH0UPN2D/p1570717743033800

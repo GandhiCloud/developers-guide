@@ -131,9 +131,9 @@ The contents `"ServiceUnitNames": null` and `"ActiveEndpoints": 0` indicates tha
 
 You may need to check the service or pod image of that route to understand about the issue.
 
-## Invalid Host Header Error
+## `Invalid Host Header` Error
 
-When accessing a service through the route there was an error called "Invalid Host Header". 
+When accessing a service through the route there was an error called `Invalid Host Header`. 
 
 Here are the steps done to identify the issue.
 
@@ -175,3 +175,24 @@ Reference : https://blog.openshift.com/deploy-vuejs-applications-on-openshift/
 
 https://github.com/vuejs-templates/webpack/issues/1205
 
+
+## `Gateway Timeout Error 504` Error
+
+Gateway Timeout error (504) appears in the Browser console and "You have been disconnected" error displayed in the popup window.
+
+This problem occurred for an user. The problem also appears for another user from the same network. But this is not occurring for the another user from another network.
+
+This problem occurs only when it is accessed via Route.
+
+In the Browser Developer tools, noticed that some service is taking more than 30s to complete and just after 30s then 504 error appears.
+
+So decided to increase the HA Proxy timeout from 30s to 60s. 
+
+Executed the below command to increase the HA Proxy timeout. 
+```
+oc annotate route myroute --overwrite haproxy.router.openshift.io/timeout=60s
+```
+
+No more timeout error appears and issue was resolved.
+
+Reference : https://docs.openshift.com/container-platform/3.11/install_config/configuring_routing.html

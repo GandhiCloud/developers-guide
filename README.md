@@ -1,4 +1,4 @@
-# Developers Guide
+# Smart Guide
 
 Contains code snippets, troubleshooting tips, tech tips and reference links for common problems and issues reated to the below topics.
 
@@ -7,11 +7,12 @@ Contains code snippets, troubleshooting tips, tech tips and reference links for 
 
 | Topic         | Sub Topic                     |Link                       | Last Updated| 
 | ------------- | -------------                 |-------------              |------------- |
-| Route         | Troubleshooting tips for Route related issues |                             [001-troubleshooting-routes](https://github.com/GandhiCloud/developers-guide/tree/master/Openshift/Routes/001-troubleshooting-routes)   | Feb-2020 |
-| Route         | External IP in Service |                             [002-assigning-external-ip-to-service](https://github.com/GandhiCloud/developers-guide/tree/master/Openshift/Routes/002-assigning-external-ip-to-service)   |Feb-2020 |
-| Route         | Sample Deployment files for Route |                             [500-simple-app-with-route](https://github.com/GandhiCloud/developers-guide/tree/master/Openshift/Routes/500-simple-app-with-route)   |Feb-2020 |
-| Route         | References|                                                      [999-references](https://github.com/GandhiCloud/developers-guide/tree/master/Openshift/Routes/999-references)   |Feb-2020 |
-| PostgreSql    | Installing PostgreSql through Openshift 3.11 catalog |                             [001-PostgreSQL-installation](https://github.com/GandhiCloud/developers-guide/tree/master/Openshift/General/001-PostgreSQL-installation)   |Feb-2020 |
+| Route         | Troubleshooting tips for Route related issues |                             [001-troubleshooting-routes](https://github.com/GandhiCloud/developers-guide/tree/master/Openshift/Routes/001-troubleshooting-routes)   | 7-Feb-2020 |
+| Route         | External IP in Service |                             [002-assigning-external-ip-to-service](https://github.com/GandhiCloud/developers-guide/tree/master/Openshift/Routes/002-assigning-external-ip-to-service)   |7-Feb-2020 |
+| Route         | Sample Deployment files for Route |                             [500-simple-app-with-route](https://github.com/GandhiCloud/developers-guide/tree/master/Openshift/Routes/500-simple-app-with-route)   |7-Feb-2020 |
+| Route         | References|                                                      [999-references](https://github.com/GandhiCloud/developers-guide/tree/master/Openshift/Routes/999-references)   |7-Feb-2020 |
+| PostgreSql    | Installing PostgreSql through Openshift 3.11 catalog |                             [001-PostgreSQL-installation](https://github.com/GandhiCloud/developers-guide/tree/master/Openshift/General/001-PostgreSQL-installation)   |7-Feb-2020 |
+| Pod           | POD was stuck in Pod Initialization for ever in Openshift 3.11 |                             [002-Pod-Stuck-In-Initialization](https://github.com/GandhiCloud/smart-guide/tree/master/Openshift/General/002-Pod-Stuck-In-Initialization)   |19-Feb-2020 |
 
 
 ## Kubernetes
